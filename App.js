@@ -1,53 +1,25 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
 import MyComponent from './src/components/MyComponent'
-import FriendList from './src/components/FriendList'
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/screens/Home'
+import ColorPallete from './src/screens/ColorPallete'
+import ColorList from './src/screens/Friends'
+import { createStackNavigator } from '@react-navigation/stack'
 
-
+const stack = createStackNavigator();
 
 export default function App() {
 
   return (
-
-    <View  >
-      <Text style={styles.text}>List of Colors</Text>
-      <ScrollView style={styles.container}>
-
-        <MyComponent name="JOnathan" color="red" />
-        <MyComponent name="JANE" color="orange" />
-        <MyComponent name="Jean" color="yellow" />
-        <MyComponent name="JOn" color="brown" />
-        <MyComponent name="JOnathan" color="blue" />
-        <MyComponent name="JOnathan" color="indigo" />
-        <MyComponent name="JOnathan" color="violet" />
-        <MyComponent name="JOnathan" color="cyan" />
-        <MyComponent name="JANE" color="orange" />
-        <MyComponent name="Jean" color="yellow" />
-        <MyComponent name="JOn" color="green" />
-        <MyComponent name="JOnathan" color="blue" />
-        <MyComponent name="JOnathan" color="indigo" />
-        <MyComponent name="JOnathan" color="violet" />
-        <MyComponent name="JOnathan" color="red" />
-        <MyComponent name="JANE" color="orange" />
-        <MyComponent name="Jean" color="yellow" />
-        <MyComponent name="JOn" color="brown" />
-        <MyComponent name="JOnathan" color="blue" />
-        <MyComponent name="JOnathan" color="indigo" />
-        <MyComponent name="JOnathan" color="violet" />
-        <MyComponent name="JOnathan" color="cyan" />
-        <MyComponent name="JANE" color="orange" />
-        <MyComponent name="Jean" color="yellow" />
-        <MyComponent name="JOn" color="green" />
-        <MyComponent name="JOnathan" color="blue" />
-        <MyComponent name="JOnathan" color="indigo" />
-        <MyComponent name="JOnathan" color="violet" />
-        <Text style={{
-          fontWeight: "bold", padding: 20
-        }}>A list of friends</Text>
-        <FriendList />
-      </ScrollView>
-
-    </View>
+    <NavigationContainer>
+      <stack.Navigator>
+        <stack.Screen name='Home' component={Home} />
+        <stack.Screen name='ColorPallete' component={ColorPallete} />
+        <stack.Screen name='ColorList' component={ColorList} />
+      </stack.Navigator>
+    </NavigationContainer>
 
   )
 }

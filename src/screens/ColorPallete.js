@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, SafeAreaView } from 'react-native'
+import Box from '../components/FriendList'
+
 
 const FRIENDS = [
     { name: 'Perez', age: 23 },
@@ -19,23 +21,9 @@ const FRIENDS = [
 ]
 
 
-const Box = ({ name, age }) => {
-
-    const boxStyle = {
-        padding: 20,
-        backgroundColor: 'dodgerblue',
-        color: 'white',
-        fontWeight: 'bold'
-    }
-    return (
-        <View>
-            <Text style={boxStyle}>{name} : {age}</Text>
-        </View>
-    )
-}
 
 
-const FriendList = () => {
+const ColorPallete = () => {
 
     return (
         <SafeAreaView>
@@ -52,4 +40,4 @@ const FriendList = () => {
     )
 }
 
-export default FriendList
+export default ColorPallete
