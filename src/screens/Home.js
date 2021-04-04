@@ -6,7 +6,10 @@ const Home = ({ navigation }) => {
     const myButton = {
         backgroundColor: "dodgerblue",
         padding: 20,
-        marginTop: 20
+        marginTop: 20,
+        borderRadius: 30,
+        textAlign: "center",
+        color: "white"
     }
 
     const container = {
