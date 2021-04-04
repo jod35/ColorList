@@ -13,4 +13,4 @@ This is a small app I build while learning the basics of React Native
 
 ## A Simple Demonstration
 
-[Demo](small.gif)
+![Demo](small.gif)
